@@ -1,0 +1,574 @@
+/* Profile Specific Styles */
+.profile-container {
+    padding: 20px 0;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px; /* Increased padding */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* More prominent shadow */
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.profile-picture {
+    width: 120px; /* Larger size */
+    height: 120px; /* Larger size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #28a745; /* Thicker border */
+    box-shadow: 0 0 0 6px rgba(40, 167, 69, 0.3); /* Green glow effect */
+    transition: transform 0.3s ease; /* Add transition for hover */
+}
+
+.profile-picture:hover {
+    transform: scale(1.05); /* Slight enlarge on hover */
+}
+
+.profile-name {
+    margin: 10px 0 0; /* Adjusted margin to push role closer */
+    color: #28a745;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.profile-role {
+    color: #007bff; /* A distinct color for the role */
+    font-size: 0.9em;
+    margin-bottom: 5px; /* Space between role and bio */
+    font-weight: 600;
+}
+
+.profile-bio {
+    color: #666;
+    font-size: 1.0em;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 80%;
+}
+
+.edit-profile-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px; /* More rounded button */
+    padding: 10px 20px; /* Larger padding */
+    font-size: 1em; /* Slightly larger font */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform */
+}
+
+.edit-profile-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.edit-profile-btn:active {
+    transform: translateY(0); /* Press effect */
+}
+
+.edit-profile-btn .fas {
+    margin-right: 8px; /* Increased margin for icon */
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px; /* Increased gap */
+    margin-bottom: 30px; /* Increased margin */
+}
+
+.stat-item {
+    background-color: #ffffff;
+    padding: 20px; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* More prominent shadow */
+    text-align: center;
+    transition: transform 0.2s ease; /* Add transition for hover */
+}
+
+.stat-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.stat-item h3 {
+    color: #28a745;
+    margin-top: 0;
+    margin-bottom: 8px; /* Adjusted margin */
+    font-size: 1.1em; /* Slightly larger font */
+    font-weight: 600; /* Medium bold */
+}
+
+.stat-item p {
+    font-size: 1.8em; /* Larger font for stats number */
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* My Adopted Tree Section */
+.my-tree-section,
+.badges-section {
+    background-color: #ffffff;
+    padding: 25px; /* Increased padding */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* More prominent shadow */
+    margin-bottom: 25px;
+}
+
+.my-tree-section h2,
+.badges-section h2 {
+    color: #28a745;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px; /* Increased margin */
+    font-size: 1.6em; /* Larger heading */
+    font-weight: 700;
+}
+
+.tree-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f8f8f8; /* Lighter background for the card */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Subtle shadow for the card */
+    border: 1px solid #eee; /* Light border */
+}
+
+.tree-image {
+    width: 100%;
+    max-width: 350px; /* Slightly larger max width */
+    height: 220px; /* Adjusted fixed height */
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Increased margin */
+    border: 2px solid #28a745; /* Green border for the image */
+}
+
+.tree-info {
+    flex-grow: 1; /* Allow info to take available space in row layout */
+}
+
+.tree-info h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 8px; /* Adjusted margin */
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+.tree-info p {
+    color: #555;
+    font-size: 1em; /* Slightly larger font */
+    margin-bottom: 12px; /* Adjusted margin */
+}
+
+.tree-info button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 25px; /* More rounded buttons */
+    padding: 10px 18px; /* Larger padding */
+    font-size: 0.95em;
+    cursor: pointer;
+    display: inline-flex; /* Use inline-flex for horizontal alignment */
+    align-items: center;
+    justify-content: center;
+    margin: 8px 5px; /* Adjust margin for spacing between buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: auto; /* Allow buttons to size based on content */
+}
+
+.tree-info button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.tree-info button:active {
+    transform: translateY(0);
+}
+
+.tree-info button .fas {
+    margin-right: 8px;
+}
+
+/* Badges Section */
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px; /* Increased gap */
+    text-align: center;
+}
+
+.badge-item {
+    background-color: #f0f0f0;
+    padding: 20px 15px; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease; /* Add transition for hover */
+}
+
+.badge-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.badge-icon {
+    font-size: 3em; /* Larger icon size */
+    color: #ffd700; /* Gold color for badges */
+    margin-bottom: 10px; /* Increased margin */
+}
+
+.badge-item span {
+    font-size: 0.9em; /* Slightly larger font */
+    font-weight: bold;
+    color: #444;
+}
+
+/* Dark Mode Adjustments for Profile Page */
+body.dark-mode .profile-header,
+body.dark-mode .stat-item,
+body.dark-mode .my-tree-section,
+body.dark-mode .badges-section {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .profile-name,
+body.dark-mode .stat-item h3,
+body.dark-mode .my-tree-section h2,
+body.dark-mode .badges-section h2 {
+    color: #5cb85c;
+}
+
+body.dark-mode .profile-role {
+    color: #0091ff;
+}
+
+body.dark-mode .profile-bio,
+body.dark-mode .stat-item p,
+body.dark-mode .tree-info h3,
+body.dark-mode .tree-info p,
+body.dark-mode .badge-item span {
+    color: #f4f7f6;
+}
+
+body.dark-mode .edit-profile-btn {
+    background-color: #0091ff; /* Darker blue for dark mode */
+}
+
+body.dark-mode .edit-profile-btn:hover {
+    background-color: #006bb3;
+}
+
+body.dark-mode .tree-info button {
+    background-color: #45a049;
+}
+
+body.dark-mode .tree-info button:hover {
+    background-color: #3b8e40;
+}
+
+body.dark-mode .badge-item {
+    background-color: #4a4a4a;
+    box-shadow: 0 1px 4px rgba(255,255,255,0.15); /* Slightly more prominent shadow for dark mode */
+}
+
+body.dark-mode .badge-icon {
+    color: #ffeb3b; /* Brighter gold for dark mode */
+}
+
+body.dark-mode .badge-item span {
+    color: #f4f7f6;
+}
+
+/* Dark Mode Adjustments for Profile Stats */
+body.dark-mode .profile-stats .stat-item {
+    background-color: #3a3a3a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* Darker shadow */
+}
+
+body.dark-mode .stat-item h3 {
+    color: #5cb85c; /* Lighter green for dark mode */
+}
+
+body.dark-mode .stat-item p {
+    color: #f4f7f6;
+}
+
+/* Dark Mode Adjustments for Tree Section */
+body.dark-mode .my-tree-section,
+body.dark-mode .badges-section {
+    background-color: #3a3a3a;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .my-tree-section h2,
+body.dark-mode .badges-section h2 {
+    color: #5cb85c;
+}
+
+body.dark-mode .tree-card {
+    background-color: #444;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    border-color: #555;
+}
+
+body.dark-mode .tree-info h3,
+body.dark-mode .tree-info p {
+    color: #f4f7f6;
+}
+
+body.dark-mode .tree-image {
+    border-color: #5cb85c;
+}
+
+body.dark-mode .tree-info button {
+    background-color: #45a049;
+}
+
+body.dark-mode .tree-info button:hover {
+    background-color: #3b8e40;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%; /* Responsive width */
+    max-width: 500px;
+    position: relative;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    color: #28a745;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.modal-content .form-group label {
+    text-align: left;
+    width: 100%;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.modal-content input[type="file"] {
+    margin-bottom: 15px;
+}
+
+.modal-content textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.save-profile-btn,
+.cancel-edit-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-profile-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.cancel-edit-btn {
+    background-color: #dc3545;
+}
+
+.cancel-edit-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.save-profile-btn:active,
+.cancel-edit-btn:active {
+    transform: translateY(0);
+}
+
+#editProfilePicturePreview {
+    border: 2px solid #ddd;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Dark Mode for Modal */
+body.dark-mode .modal-content {
+    background-color: #3a3a3a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+body.dark-mode .close-button {
+    color: #bbb;
+}
+
+body.dark-mode .close-button:hover,
+body.dark-mode .close-button:focus {
+    color: #f4f7f6;
+}
+
+body.dark-mode .modal-content h2 {
+    color: #5cb85c;
+}
+
+body.dark-mode .modal-content input[type="text"],
+body.dark-mode .modal-content textarea {
+    background-color: #4a4a4a;
+    color: #f4f7f6;
+    border-color: #555;
+}
+
+body.dark-mode .save-profile-btn {
+    background-color: #45a049;
+}
+
+body.dark-mode .save-profile-btn:hover {
+    background-color: #3b8e40;
+}
+
+body.dark-mode .cancel-edit-btn {
+    background-color: #a04545;
+}
+
+body.dark-mode .cancel-edit-btn:hover {
+    background-color: #8c3a3a;
+}
+
+/* Responsive adjustments for Profile Page */
+@media (min-width: 768px) {
+    .profile-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* Profile header on left, stats/trees/badges on right */
+        gap: 20px;
+        align-items: start;
+    }
+
+    .profile-header {
+        grid-column: 1 / 2;
+        /* Ensure it doesn't stretch */
+        height: fit-content;
+    }
+
+    .profile-stats {
+        grid-column: 2 / 3;
+    }
+
+    .my-tree-section {
+        grid-column: 1 / 3; /* Spans across both columns */
+    }
+
+    .badges-section {
+        grid-column: 1 / 3; /* Spans across both columns */
+    }
+
+    .tree-card {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+    }
+
+    .tree-image {
+        margin-right: 20px;
+        margin-bottom: 0;
+        height: 180px; /* Adjusted height for desktop view */
+    }
+
+    .tree-info button {
+        margin: 8px 10px 8px 0; /* Adjust button margin for horizontal layout */
+    }
+
+    .tree-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text to the left */
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile-container {
+        grid-template-columns: 1fr 1fr 1fr; /* More columns for larger screens */
+    }
+
+    .profile-header {
+        grid-column: 1 / 2;
+    }
+
+    .profile-stats {
+        grid-column: 2 / 4; /* Spans two columns */
+    }
+
+    .my-tree-section {
+        grid-column: 1 / 4; /* Still spans all columns */
+    }
+
+    .badges-section {
+        grid-column: 1 / 4; /* Still spans all columns */
+    }
+} 

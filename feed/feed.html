@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pledge 365 - Community Feed</title>
+    <link rel="icon" href="../assets/Pledge-365.png" type="image/png">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to global style.css -->
+    <link rel="stylesheet" href="feed.css"> <!-- Link to feed-specific style.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Community Feed</h1>
+            <div class="dark-mode-toggle">
+                <div class="toggle-ball"></div>
+            </div>
+            <nav class="main-nav">
+                <!-- Desktop navigation items can go here -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <!-- Filtering Options (FR19) -->
+            <section class="filter-options">
+                <input type="date" value="2004-03-11">
+                <button><i class="fas fa-search"></i> Apply Filters</button>
+            </section>
+
+            <h2>All Tree Updates</h2>
+            <div id="community-feed" class="community-feed">
+                <!-- Example Community Tree Post 1 -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="user-avatar">
+                        <div class="post-info">
+                            <div class="user-primary-info">
+                                <span class="username">EcoWarrior</span>
+                                <span class="user-streak">🔥 7 days</span>
+                            </div>
+                            <div class="post-secondary-info">
+                                <span class="post-date">2 hours ago</span>
+                                <span class="user-eco-level">Eco Level: Tree Guardian</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-location"><i class="fas fa-map-marker-alt"></i> New York, USA</div>
+                    <h3 class="post-tree-name">Oak Tree - Greenie</h3>
+                    <img src="../assets/Tree.png" alt="Tree Post Image" class="post-image">
+                    <div class="post-content">
+                        <p class="post-caption">My little sapling is thriving! So proud of its new leaves. #Pledge365 #TreeLove</p>
+                        <div class="post-actions">
+                            <button class="action-btn"><i class="far fa-heart action-icon"></i> Like</button>
+                            <button class="action-btn"><i class="far fa-comment action-icon"></i> Comment</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Example Community Tree Post 2 -->
+                <article class="post-card">
+                    <div class="post-header">
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="user-avatar">
+                        <div class="post-info">
+                            <div class="user-primary-info">
+                                <span class="username">GreenThumb22</span>
+                                <span class="user-streak">🔥 30 days</span>
+                            </div>
+                            <div class="post-secondary-info">
+                                <span class="post-date">Yesterday</span>
+                                <span class="user-eco-level">Eco Level: Tree Hero</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-location"><i class="fas fa-map-marker-alt"></i> California, USA</div>
+                    <h3 class="post-tree-name">Banyan Tree - Old Soul</h3>
+                    <img src="../assets/Tree.png" alt="Tree Post Image" class="post-image">
+                    <div class="post-content">
+                        <p class="post-caption">Checked on my tree today, still strong! The AI health analysis said it's super healthy. 🌱 #NatureLover</p>
+                        <div class="post-actions">
+                            <button class="action-btn"><i class="far fa-heart action-icon"></i> Like</button>
+                            <button class="action-btn"><i class="far fa-comment action-icon"></i> Comment</button>
+                        </div>
+                    </div>
+                </article>
+
+                <p style="text-align: center; color: #666;">Load more posts...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bottom-nav">
+        <nav>
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home nav-icon"></i>
+                <span>Home</span>
+            </a>
+            <a href="feed.html" class="nav-item active">
+                <i class="fas fa-tree nav-icon"></i>
+                <span>Feed</span>
+            </a>
+            <a href="../post/create-post.html" class="nav-item">
+                <i class="fas fa-plus-circle nav-icon"></i>
+                <span>Add</span>
+            </a>
+            <a href="../profile/profile.html" class="nav-item">
+                <i class="fas fa-user nav-icon"></i>
+                <span>Profile</span>
+            </a>
+            <a href="../leaderboard/leaderboard.html" class="nav-item">
+                <i class="fas fa-trophy nav-icon"></i>
+                <span>Leaderboard</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="feed.js"></script>
+</body>
+</html> 

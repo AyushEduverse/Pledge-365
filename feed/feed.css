@@ -1,0 +1,297 @@
+/* Feed Page Specific Styles */
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.filter-options select,
+.filter-options input[type="date"],
+.filter-options button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.filter-options button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.filter-options button:hover {
+    background-color: #218838;
+}
+
+.filter-options button .fas {
+    margin-right: 5px;
+}
+
+.community-feed {
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column; /* Keep column direction for its contents */
+    /* Removed flex-grow: 1 to prevent it from taking all available space */
+    justify-content: center;
+}
+
+.post-secondary-info {
+    display: flex;
+    flex-direction: column; /* Stack date and eco-level vertically */
+    font-size: 0.85em;
+    color: #666;
+}
+
+.post-location {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.post-location .fas {
+    margin-right: 5px;
+    color: #007bff; /* A distinct color for the map icon */
+}
+
+.user-primary-info,
+.post-secondary-info {
+    display: flex;
+    justify-content: space-between; /* To push streak/level to the right */
+    width: 100%;
+    align-items: center; /* Vertically align items */
+}
+
+.username {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 1.25em; /* Increased size */
+}
+
+.user-streak {
+    font-size: 0.9em; /* Increased size */
+    color: #ff8c00; /* Orange for streak */
+    font-weight: bold;
+}
+
+.post-date {
+    font-size: 0.95em; /* Increased size */
+    color: #888;
+}
+
+.user-eco-level {
+    font-size: 0.85em; /* Increased size */
+    color: #007bff; /* Blue for eco level */
+    margin-top: 2px;
+}
+
+.tree-details-summary {
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.tree-details-summary p {
+    margin: 5px 0;
+}
+
+.tree-details-summary strong {
+    color: #28a745;
+}
+
+.tree-species {
+    font-style: italic;
+    color: #666;
+}
+
+.tree-health {
+    font-weight: bold;
+}
+
+.tree-health.healthy {
+    color: #28a745;
+}
+
+.tree-health.unhealthy {
+    color: #dc3545;
+}
+
+.tree-health.unknown {
+    color: #ffc107;
+}
+
+.tree-health .fas {
+    margin-right: 5px;
+}
+
+.post-image {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post-caption {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #444;
+    font-size: 0.95em;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.action-btn:hover {
+    color: #28a745;
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* Dark Mode Adjustments for Feed Page */
+body.dark-mode .filter-options {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .filter-options button {
+    background-color: #5cb85c;
+}
+
+body.dark-mode .filter-options button:hover {
+    background-color: #4CAF50;
+}
+
+body.dark-mode .post-card {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .username,
+body.dark-mode .tree-details-summary strong,
+body.dark-mode .tree-species,
+body.dark-mode .tree-health {
+    color: #f4f7f6;
+}
+
+body.dark-mode .post-date,
+body.dark-mode .user-eco-level,
+body.dark-mode .post-caption,
+body.dark-mode .action-btn {
+    color: #ccc;
+}
+
+body.dark-mode .user-streak {
+    color: #ffa500; /* Brighter orange for dark mode streak */
+}
+
+body.dark-mode .user-eco-level {
+    color: #66b3ff; /* Lighter blue for dark mode eco level */
+}
+
+body.dark-mode .tree-health.healthy {
+    color: #5cb85c;
+}
+
+body.dark-mode .tree-health.unhealthy {
+    color: #e65c6c;
+}
+
+body.dark-mode .tree-health.unknown {
+    color: #ffda47;
+}
+
+body.dark-mode .post-actions {
+    border-top: 1px solid #555;
+}
+
+body.dark-mode .post-location {
+    color: #bbb;
+}
+
+body.dark-mode .post-location .fas {
+    color: #0091ff;
+}
+
+/* Adjustments for larger screens for Feed Page */
+@media (min-width: 768px) {
+    .community-feed {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+} 

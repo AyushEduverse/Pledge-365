@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pledge 365 - Profile</title>
+    <link rel="icon" href="../assets/Pledge-365.png" type="image/png">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to global style.css -->
+    <link rel="stylesheet" href="profile.css"> <!-- Link to profile-specific style.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>My Profile</h1>
+            <div class="dark-mode-toggle">
+                <div class="toggle-ball"></div>
+            </div>
+            <nav class="main-nav">
+                <!-- Desktop navigation items can go here -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container profile-container">
+            <section class="profile-header">
+                <img src="../assets/user-pic.png" alt="Profile Picture" class="profile-picture">
+                <h2 class="profile-name">Ayush Gupta</h2>
+                <p class="profile-role">[User Role]</p>
+                <p class="profile-bio">[User Bio/Description]</p>
+                <button class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+            </section>
+
+            <section class="profile-stats">
+                <div class="stat-item">
+                    <h3>Trees Adopted</h3>
+                    <p>1</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Total Uploads</h3>
+                    <p>15</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Coins Earned</h3>
+                    <p>250</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Eco Level</h3>
+                    <p>Tree Guardian</p>
+                </div>
+            </section>
+
+            <section class="my-tree-section">
+                <h2>My Adopted Tree</h2>
+                <div class="tree-card">
+                    <img src="../assets/Tree.png" alt="Adopted Tree" class="tree-image">
+                    <div class="tree-info">
+                        <h3>Oak Tree - Greenie</h3>
+                        <p>Adopted: January 1, 2024</p>
+                        <p>Location: University Campus</p>
+                        <button class="view-timeline-btn"><i class="fas fa-chart-line"></i> View Timeline</button>
+                        <button class="qr-code-btn"><i class="fas fa-qrcode"></i> Generate QR</button>
+                        <button class="timelapse-btn"><i class="fas fa-video"></i> Timelapse</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="badges-section">
+                <h2>My Badges</h2>
+                <div class="badges-grid">
+                    <div class="badge-item">
+                        <i class="fas fa-leaf badge-icon"></i>
+                        <span>7-Day Streak</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-seedling badge-icon"></i>
+                        <span>First Adopt</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-award badge-icon"></i>
+                        <span>Eco Champion</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Edit Profile Modal -->
+    <div id="editProfileModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="editProfilePicture">Profile Picture:</label>
+                    <input type="file" id="editProfilePicture" accept="image/*" style="display: none;">
+                    <img id="editProfilePicturePreview" src="#" alt="Profile Picture Preview" style="max-width: 100px; height: auto; margin-top: 10px; border-radius: 50%; display: block; cursor: pointer;">
+                </div>
+                <div class="form-group">
+                    <label for="editProfileName">Name:</label>
+                    <input type="text" id="editProfileName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editProfileRole">Role:</label>
+                    <input type="text" id="editProfileRole">
+                </div>
+                <div class="form-group">
+                    <label for="editProfileBio">Bio:</label>
+                    <textarea id="editProfileBio" rows="4"></textarea>
+                </div>
+                <button type="submit" class="save-profile-btn">Save Changes</button>
+                <button type="button" class="cancel-edit-btn">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bottom-nav">
+        <nav>
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home nav-icon"></i>
+                <span>Home</span>
+            </a>
+            <a href="../feed/feed.html" class="nav-item">
+                <i class="fas fa-tree nav-icon"></i>
+                <span>Feed</span>
+            </a>
+            <a href="../post/create-post.html" class="nav-item">
+                <i class="fas fa-plus-circle nav-icon"></i>
+                <span>Add</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <i class="fas fa-user nav-icon"></i>
+                <span>Profile</span>
+            </a>
+            <a href="../leaderboard/leaderboard.html" class="nav-item">
+                <i class="fas fa-trophy nav-icon"></i>
+                <span>Leaderboard</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="../script.js"></script> <!-- Link to global script.js -->
+    <script src="profile.js"></script> <!-- Link to profile-specific script.js -->
+</body>
+</html> 

@@ -1,0 +1,228 @@
+/* Create Post Specific Styles */
+.post-container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    min-height: calc(100vh - 120px); /* Adjust based on header/footer height */
+}
+
+.create-post-form {
+    background-color: #ffffff;
+    padding: 30px; /* Increased padding */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* More prominent shadow */
+    max-width: 600px;
+    width: 90%; /* Responsive width */
+    margin: 20px auto; /* Centered with top/bottom margin */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increased spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.05em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group textarea {
+    width: 100%; /* Full width */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Slightly more rounded input fields */
+    font-size: 1em;
+    font-family: inherit; /* Ensure font family is inherited consistently */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    line-height: 1.5; /* Standardize line height for visual consistency */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Glow effect on focus */
+    outline: none;
+}
+
+.form-group input[type="file"] {
+    padding: 10px;
+}
+
+.help-text {
+    font-size: 0.85em; /* Slightly larger help text */
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Image Preview Styling */
+#imagePreview {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.get-gps-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 0.95em; /* Slightly larger font */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform */
+}
+
+.get-gps-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.get-gps-btn:active {
+    transform: translateY(0); /* Press effect */
+}
+
+.get-gps-btn .fas {
+    margin-right: 8px;
+}
+
+.submit-post-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform */
+    margin-top: 25px; /* Added margin-top */
+}
+
+.submit-post-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.submit-post-btn:active {
+    transform: translateY(0); /* Press effect */
+}
+
+.submit-post-btn .fas {
+    margin-right: 10px;
+}
+
+/* Dark Mode Adjustments for Create Post Page */
+body.dark-mode .create-post-form {
+    background-color: #3a3a3a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Darker shadow for dark mode */
+}
+
+body.dark-mode .form-group label,
+body.dark-mode .help-text {
+    color: #f4f7f6;
+}
+
+body.dark-mode .form-group input[type="text"],
+body.dark-mode .form-group input[type="date"],
+body.dark-mode .form-group input[type="file"],
+body.dark-mode .form-group textarea {
+    background-color: #4a4a4a;
+    color: #f4f7f6;
+    border-color: #555;
+}
+
+body.dark-mode .form-group input[type="text"]:focus,
+body.dark-mode .form-group input[type="date"]:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #0091ff;
+    box-shadow: 0 0 0 3px rgba(0, 145, 255, 0.4); /* Dark mode glow */
+}
+
+body.dark-mode .get-gps-btn {
+    background-color: #0091ff;
+}
+
+body.dark-mode .get-gps-btn:hover {
+    background-color: #006bb3;
+}
+
+body.dark-mode .submit-post-btn {
+    background-color: #5cb85c;
+}
+
+body.dark-mode .submit-post-btn:hover {
+    background-color: #4CAF50;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .create-post-form {
+        padding: 40px;
+    }
+
+    .form-group input[type="file"] {
+        padding: 10px;
+    }
+
+    .get-gps-btn {
+        width: fit-content;
+    }
+} 
+
+.date-input-wrapper {
+    position: relative;
+    display: flex; /* Use flexbox to align input and icon */
+    align-items: center;
+}
+
+.date-input-wrapper input[type="date"] {
+    padding-right: 40px; /* Make space for the icon */
+    -webkit-appearance: none; /* Hide default calendar icon for WebKit browsers */
+    -moz-appearance: none;    /* Hide default calendar icon for Mozilla browsers */
+    appearance: none;         /* Hide default calendar icon for other browsers */
+}
+
+/* Optional: For browsers that don't fully support appearance: none, hide the clear button */
+.date-input-wrapper input[type="date"]::-webkit-clear-button,
+.date-input-wrapper input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* Optional: For IE/Edge, hide the clear button */
+.date-input-wrapper input[type="date"]::-ms-clear {
+    display: none;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 10px;
+    color: #666;
+    cursor: pointer;
+    font-size: 1.2em;
+    pointer-events: none; /* Prevent icon from blocking input clicks */
+}
+
+body.dark-mode .calendar-icon {
+    color: #ccc;
+} 

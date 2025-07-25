@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pledge 365 - Home</title>
+    <link rel="icon" href="assets/Pledge-365.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Pledge 365</h1>
+            <div class="dark-mode-toggle">
+                <div class="toggle-ball"></div>
+            </div>
+            <nav class="main-nav">
+                <!-- Desktop navigation items can go here if needed, but primarily mobile-first -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="home-user-summary">
+                <img src="assets/user-pic.png" alt="User Profile Picture" class="user-profile-thumb">
+                <div class="user-details">
+                    <h2>Welcome, Ayush!</h2>
+                    <p class="summary-stat">Trees Adopted: <span>1</span></p>
+                    <p class="summary-stat">Total Uploads: <span>15</span></p>
+                    <p class="summary-stat">Coins Earned: <span>250</span></p>
+                    <p class="summary-stat">Eco Level: <span>Tree Guardian</span></p>
+                </div>
+            </section>
+
+            <h2>My Latest Uploads</h2>
+            <div id="user-tree-uploads" class="community-feed">
+                <!-- Example User's Tree Post 1 (simplified) -->
+                <article class="post-card">
+                    <h3 class="post-tree-name">My First Adopted Tree</h3>
+                    <img src="assets/Tree.png" alt="Tree Post Image" class="post-image">
+                    <div class="post-content">
+                        <p class="post-caption">Excited to start my Pledge 365 journey with this beautiful sapling! #NewBeginnings</p>
+                    </div>
+                </article>
+
+                <!-- Example User's Tree Post 2 (simplified) -->
+                <article class="post-card">
+                    <h3 class="post-tree-name">Growing Strong!</h3>
+                    <img src="assets/Tree.png" alt="Tree Post Image" class="post-image">
+                    <div class="post-content">
+                        <p class="post-caption">Another week, another update! My tree is getting taller. 🌱 #Growth #Pledge365</p>
+                    </div>
+                </article>
+
+                <p style="text-align: center; color: #666;">No uploads yet. Adopt a tree to see your progress here!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bottom-nav">
+        <nav>
+            <a href="index.html" class="nav-item active">
+                <i class="fas fa-home nav-icon"></i>
+                <span>Home</span>
+            </a>
+            <a href="feed/feed.html" class="nav-item">
+                <i class="fas fa-tree nav-icon"></i>
+                <span>Feed</span>
+            </a>
+            <a href="post/create-post.html" class="nav-item">
+                <i class="fas fa-plus-circle nav-icon"></i>
+                <span>Add</span>
+            </a>
+            <a href="profile/profile.html" class="nav-item">
+                <i class="fas fa-user nav-icon"></i>
+                <span>Profile</span>
+            </a>
+            <a href="leaderboard/leaderboard.html" class="nav-item">
+                <i class="fas fa-trophy nav-icon"></i>
+                <span>Leaderboard</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

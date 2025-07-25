@@ -1,0 +1,449 @@
+/* Basic Reset & Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.home-user-summary {
+    display: flex;
+    flex-direction: column; /* Stack items vertically for better mobile presentation */
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 25px; /* Increased padding */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Stronger, softer shadow */
+    margin-bottom: 25px; /* Increased margin */
+}
+
+.user-profile-thumb {
+    width: 90px; /* Slightly larger thumbnail */
+    height: 90px; /* Slightly larger thumbnail */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px; /* Increased margin */
+    border: 4px solid #28a745; /* Thicker border */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Shadow for the image */
+}
+
+.user-details h2 {
+    margin-top: 0;
+    margin-bottom: 8px; /* Adjusted margin */
+    color: #28a745;
+    font-size: 1.8em; /* Larger heading */
+}
+
+.user-details .summary-stat {
+    font-size: 1em; /* Slightly larger text */
+    color: #555;
+    margin: 5px 0; /* Adjusted margin */
+}
+
+.user-details .summary-stat span {
+    font-weight: bold;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: #f4f7f6;
+}
+
+body.dark-mode .main-header {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .community-feed, 
+body.dark-mode .create-post-section, 
+body.dark-mode .post-card {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .main-content h2,
+body.dark-mode .username {
+    color: #5cb85c; /* A lighter green for dark mode */
+}
+
+body.dark-mode .post-date,
+body.dark-mode .post-caption,
+body.dark-mode .action-btn {
+    color: #ccc;
+}
+
+body.dark-mode .post-actions {
+    border-top: 1px solid #555;
+}
+
+body.dark-mode .bottom-nav {
+    background-color: #1a1a1a;
+    box-shadow: 0 -2px 8px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .bottom-nav .nav-item {
+    color: #aaa;
+}
+
+body.dark-mode .bottom-nav .nav-item:hover,
+body.dark-mode .bottom-nav .nav-item.active {
+    color: #5cb85c;
+}
+
+body.dark-mode .create-post-btn-large {
+    background-color: #5cb85c;
+}
+
+body.dark-mode .create-post-btn-large:hover {
+    background-color: #4CAF50;
+}
+
+/* Dark mode toggle switch styling (will be added to HTML/JS later) */
+.dark-mode-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 3px;
+    transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle.active {
+    background-color: #28a745;
+}
+
+.dark-mode-toggle .toggle-ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle.active .toggle-ball {
+    transform: translateX(25px);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #28a745; /* Green header */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Main Content Styles */
+.main-content {
+    padding: 20px 0 80px 0; /* Add padding for bottom nav */
+}
+
+.main-content h2 {
+    text-align: center;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.community-feed {
+    background-color: transparent; /* Remove white background from container */
+    padding: 0; /* Remove padding from container */
+    box-shadow: none; /* Remove shadow from container */
+    min-height: auto; /* Reset min-height */
+    flex-direction: column; /* Stack posts vertically */
+}
+
+/* Bottom Navigation Styles */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.bottom-nav nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.bottom-nav .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 0.8em;
+    padding: 8px 0; /* Adjusted padding for better button feel and consistent height */
+    flex: 1; /* Distribute space evenly */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+}
+
+.bottom-nav .nav-item:hover,
+.bottom-nav .nav-item.active {
+    color: white; /* Active text color */
+    background-color: #28a745; /* Green background for active/hover */
+}
+
+.bottom-nav .nav-item:active { /* Click effect (background color removed, only icon scales) */
+    /* Keep background-color for active state consistency */
+    background-color: #218838; /* Slightly darker green on active click */
+}
+
+.bottom-nav .nav-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px; /* For Font Awesome icons */
+    line-height: 1; /* Align icon vertically */
+    display: block; /* Ensures proper sizing */
+    text-align: center;
+    margin-bottom: 4px; /* Consistent spacing with text */
+    transition: transform 0.2s ease; /* Added transition for icon enlargement */
+}
+
+.bottom-nav .nav-item:active .nav-icon { /* Icon enlargement on click */
+    transform: scale(1.2); /* Make icon 20% larger */
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .bottom-nav .nav-item:hover,
+body.dark-mode .bottom-nav .nav-item.active {
+    color: white;
+    background-color: #5cb85c; /* Dark mode active green */
+}
+
+body.dark-mode .bottom-nav .nav-item:active {
+    background-color: #4CAF50; /* Darker green on active click in dark mode */
+}
+
+body.dark-mode .home-user-summary {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .user-details h2 {
+    color: #5cb85c;
+}
+
+body.dark-mode .user-details .summary-stat,
+body.dark-mode .user-details .summary-stat span {
+    color: #f4f7f6;
+}
+
+/* Removed dark mode styles for removed elements from home page post cards */
+
+body.dark-mode .post-caption {
+    color: #ccc;
+}
+
+.bottom-nav .nav-icon,
+.action-icon,
+.create-post-btn-large .btn-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 24px; /* For Font Awesome icons */
+    line-height: 1; /* Align icon vertically */
+    display: block; /* Ensures proper sizing */
+    text-align: center;
+    margin-bottom: 4px; /* Consistent spacing with text */
+}
+
+.action-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px; /* For Font Awesome icons */
+    margin-right: 5px;
+}
+
+.create-post-btn-large .btn-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px; /* For Font Awesome icons */
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .main-header h1 {
+        font-size: 2.5em;
+    }
+
+    .bottom-nav {
+        /* Hide bottom nav on larger screens if a top nav is introduced */
+        /* Or adjust for desktop layout if preferred */
+        position: static;
+        box-shadow: none;
+        border-top: 1px solid #eee;
+    }
+
+    .bottom-nav nav {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        padding-bottom: 20px; /* Adjust padding if bottom nav is gone */
+    }
+}
+
+/* Create Post Section */
+.create-post-section {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.create-post-btn-large {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px; /* Limit width on larger screens */
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+}
+
+.create-post-btn-large:hover {
+    background-color: #218838;
+}
+
+.create-post-btn-large .btn-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 20px; /* For Font Awesome icons */
+    margin-right: 10px;
+}
+
+/* Community Post Card Styles */
+.post-card {
+    background-color: #ffffff;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Stronger, softer shadow */
+    margin-bottom: 25px; /* Consistent margin */
+    overflow: hidden;
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column;
+}
+
+.post-card .post-tree-name {
+    font-size: 1.3em; /* Slightly larger heading */
+    margin: 15px; /* Add margin for spacing */
+    text-align: center; /* Center the tree name */
+    color: #28a745; /* Green color for consistency */
+}
+
+.post-image {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    display: block;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.post-content {
+    padding: 15px; /* Consistent padding */
+    flex-grow: 1; /* Allow content to grow and push caption down */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push caption to bottom if content is sparse */
+}
+
+.post-caption {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #444;
+    font-size: 0.95em; /* Slightly larger font */
+}
+
+/* Dark Mode Adjustments */
+body.dark-mode .home-user-summary {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .user-details h2 {
+    color: #5cb85c;
+}
+
+body.dark-mode .user-details .summary-stat,
+body.dark-mode .user-details .summary-stat span {
+    color: #f4f7f6;
+}
+
+body.dark-mode .post-card {
+    background-color: #3a3a3a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .post-card .post-tree-name {
+    color: #5cb85c;
+}
+
+body.dark-mode .post-caption {
+    color: #ccc;
+}
+
+/* Adjust community feed on larger screens */
+@media (min-width: 768px) {
+    .community-feed {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+} 
+
+/* Adjustments for larger screens for .home-user-summary */
+@media (min-width: 768px) {
+    .home-user-summary {
+        flex-direction: row; /* Back to row on desktop */
+        text-align: left;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .user-profile-thumb {
+        margin-right: 25px;
+        margin-bottom: 0;
+    }
+
+    .user-details {
+        text-align: left;
+    }
+} 

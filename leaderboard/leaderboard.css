@@ -1,0 +1,265 @@
+/* Leaderboard Specific Styles */
+.leaderboard-container {
+    padding: 20px 0;
+}
+
+.leaderboard-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.leaderboard-filters .filter-btn {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.leaderboard-filters .filter-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.leaderboard-filters .filter-btn.active {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+/* Top Three Ranks */
+.top-three {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.rank-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px; /* Ensure cards have a minimum width */
+}
+
+.rank-card.first {
+    padding: 25px;
+    background-color: #ffd700; /* Gold */
+    color: #333;
+    transform: translateY(-10px); /* Slightly elevate the first rank */
+    border: 2px solid #e6b800;
+}
+
+.rank-card.second {
+    background-color: #c0c0c0; /* Silver */
+    color: #333;
+    border: 2px solid #a0a0a0;
+}
+
+.rank-card.third {
+    background-color: #cd7f32; /* Bronze */
+    color: #333;
+    border: 2px solid #a05010;
+}
+
+.rank-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 3px solid white;
+}
+
+.rank-card.first .rank-avatar {
+    border-color: #e6b800;
+}
+.rank-card.second .rank-avatar {
+    border-color: #a0a0a0;
+}
+.rank-card.third .rank-avatar {
+    border-color: #a05010;
+}
+
+.rank-number {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #28a745; /* Green */
+    margin-bottom: 5px;
+}
+
+.rank-card.first .rank-number {
+    color: #a07d00;
+}
+.rank-card.second .rank-number {
+    color: #606060;
+}
+.rank-card.third .rank-number {
+    color: #804010;
+}
+
+.rank-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.rank-score {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.rank-card.first .rank-score,
+.rank-card.second .rank-score,
+.rank-card.third .rank-score {
+    color: #333;
+}
+
+/* Leaderboard List */
+.leaderboard-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    margin-bottom: 10px;
+}
+
+.leaderboard-item .rank {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #28a745;
+    width: 30px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.leaderboard-item .item-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 15px;
+    flex-shrink: 0;
+}
+
+.leaderboard-item .item-name {
+    flex-grow: 1;
+    font-weight: bold;
+    color: #333;
+}
+
+.leaderboard-item .item-score {
+    font-size: 0.9em;
+    color: #555;
+    flex-shrink: 0;
+}
+
+/* Dark Mode Adjustments for Leaderboard Page */
+body.dark-mode .leaderboard-filters,
+body.dark-mode .rank-card,
+body.dark-mode .leaderboard-item {
+    background-color: #3a3a3a;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .leaderboard-filters .filter-btn {
+    background-color: #4a4a4a;
+    border-color: #555;
+    color: #f4f7f6;
+}
+
+body.dark-mode .leaderboard-filters .filter-btn:hover {
+    background-color: #5a5a5a;
+}
+
+body.dark-mode .leaderboard-filters .filter-btn.active {
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    color: white;
+}
+
+body.dark-mode .rank-card.first {
+    background-color: #b39b00;
+    border-color: #8f7a00;
+    color: #f4f7f6;
+}
+
+body.dark-mode .rank-card.second {
+    background-color: #8c8c8c;
+    border-color: #707070;
+    color: #f4f7f6;
+}
+
+body.dark-mode .rank-card.third {
+    background-color: #a3662a;
+    border-color: #7e4b1f;
+    color: #f4f7f6;
+}
+
+body.dark-mode .rank-number,
+body.dark-mode .leaderboard-item .rank {
+    color: #5cb85c;
+}
+
+body.dark-mode .rank-card.first .rank-number {
+    color: #ffcc00;
+}
+body.dark-mode .rank-card.second .rank-number {
+    color: #cccccc;
+}
+body.dark-mode .rank-card.third .rank-number {
+    color: #ff9933;
+}
+
+body.dark-mode .rank-name,
+body.dark-mode .leaderboard-item .item-name {
+    color: #f4f7f6;
+}
+
+body.dark-mode .rank-score,
+body.dark-mode .leaderboard-item .item-score {
+    color: #ccc;
+}
+
+/* Responsive adjustments for Leaderboard Page */
+@media (min-width: 768px) {
+    .top-three {
+        gap: 30px;
+    }
+
+    .rank-card {
+        min-width: 150px;
+        padding: 20px;
+    }
+
+    .rank-card.first {
+        padding: 30px;
+    }
+
+    .rank-avatar {
+        width: 80px;
+        height: 80px;
+    }
+} 

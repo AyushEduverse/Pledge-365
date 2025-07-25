@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pledge 365 - Leaderboard</title>
+    <link rel="icon" href="../assets/Pledge-365.png" type="image/png">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to global style.css -->
+    <link rel="stylesheet" href="leaderboard.css"> <!-- Link to leaderboard-specific style.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Leaderboard</h1>
+            <div class="dark-mode-toggle">
+                <div class="toggle-ball"></div>
+            </div>
+            <nav class="main-nav">
+                <!-- Desktop navigation items can go here -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container leaderboard-container">
+            <section class="leaderboard-filters">
+                <button class="filter-btn active">Overall</button>
+                <button class="filter-btn">Daily</button>
+                <button class="filter-btn">Weekly</button>
+                <button class="filter-btn">Class</button>
+                <button class="filter-btn">Campus</button>
+            </section>
+
+            <section class="leaderboard-list">
+                <!-- Top 3 -->
+                <div class="top-three">
+                    <div class="rank-card second">
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="rank-avatar">
+                        <span class="rank-number">2</span>
+                        <h3 class="rank-name">GreenGuru</h3>
+                        <p class="rank-score">480 Coins</p>
+                    </div>
+                    <div class="rank-card first">
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="rank-avatar">
+                        <span class="rank-number">1</span>
+                        <h3 class="rank-name">EcoHero</h3>
+                        <p class="rank-score">520 Coins</p>
+                    </div>
+                    <div class="rank-card third">
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="rank-avatar">
+                        <span class="rank-number">3</span>
+                        <h3 class="rank-name">NatureNerd</h3>
+                        <p class="rank-score">450 Coins</p>
+                    </div>
+                </div>
+
+                <!-- Rest of the leaderboard -->
+                <ul class="leaderboard-items">
+                    <li class="leaderboard-item">
+                        <span class="rank">4</span>
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="item-avatar">
+                        <span class="item-name">TreeHugger</span>
+                        <span class="item-score">420 Coins</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <span class="rank">5</span>
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="item-avatar">
+                        <span class="item-name">LeafLover</span>
+                        <span class="item-score">390 Coins</span>
+                    </li>
+                    <li class="leaderboard-item">
+                        <span class="rank">6</span>
+                        <img src="../assets/user-pic.png" alt="User Avatar" class="item-avatar">
+                        <span class="item-name">ForestFriend</span>
+                        <span class="item-score">370 Coins</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bottom-nav">
+        <nav>
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home nav-icon"></i>
+                <span>Home</span>
+            </a>
+            <a href="../feed/feed.html" class="nav-item">
+                <i class="fas fa-tree nav-icon"></i>
+                <span>Feed</span>
+            </a>
+            <a href="../post/create-post.html" class="nav-item">
+                <i class="fas fa-plus-circle nav-icon"></i>
+                <span>Add</span>
+            </a>
+            <a href="../profile/profile.html" class="nav-item">
+                <i class="fas fa-user nav-icon"></i>
+                <span>Profile</span>
+            </a>
+            <a href="leaderboard.html" class="nav-item active">
+                <i class="fas fa-trophy nav-icon"></i>
+                <span>Leaderboard</span>
+            </a>
+        </nav>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="leaderboard.js"></script>
+</body>
+</html> 
