@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style.css"> <!-- Link to global style.css -->
     <link rel="stylesheet" href="feed.css"> <!-- Link to feed-specific style.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../components/toast.css"> <!-- Link to toast styles -->
 </head>
 <body>
     <header class="main-header">
@@ -47,14 +48,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post-location"><i class="fas fa-map-marker-alt"></i> New York, USA</div>
                     <h3 class="post-tree-name">Oak Tree - Greenie</h3>
                     <img src="../assets/Tree.png" alt="Tree Post Image" class="post-image">
                     <div class="post-content">
                         <p class="post-caption">My little sapling is thriving! So proud of its new leaves. #Pledge365 #TreeLove</p>
                         <div class="post-actions">
-                            <button class="action-btn"><i class="far fa-heart action-icon"></i> Like</button>
-                            <button class="action-btn"><i class="far fa-comment action-icon"></i> Comment</button>
+                            <button class="action-btn like-btn"><i class="far fa-heart action-icon"></i> <span class="like-count">0</span>&nbsp;Like</button>
+                            <button class="action-btn comment-btn"><i class="far fa-comment action-icon"></i> Comment</button>
+                        </div>
+                        <div class="post-comments">
+                            <!-- Comments will be loaded here dynamically -->
                         </div>
                     </div>
                 </article>
@@ -74,14 +77,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="post-location"><i class="fas fa-map-marker-alt"></i> California, USA</div>
                     <h3 class="post-tree-name">Banyan Tree - Old Soul</h3>
                     <img src="../assets/Tree.png" alt="Tree Post Image" class="post-image">
                     <div class="post-content">
                         <p class="post-caption">Checked on my tree today, still strong! The AI health analysis said it's super healthy. 🌱 #NatureLover</p>
                         <div class="post-actions">
-                            <button class="action-btn"><i class="far fa-heart action-icon"></i> Like</button>
-                            <button class="action-btn"><i class="far fa-comment action-icon"></i> Comment</button>
+                            <button class="action-btn like-btn"><i class="far fa-heart action-icon"></i> <span class="like-count">0</span>&nbsp;Like</button>
+                            <button class="action-btn comment-btn"><i class="far fa-comment action-icon"></i> Comment</button>
+                        </div>
+                        <div class="post-comments">
+                            <!-- Comments will be loaded here dynamically -->
                         </div>
                     </div>
                 </article>
@@ -118,5 +123,6 @@
 
     <script src="../script.js"></script>
     <script src="feed.js"></script>
+    <script src="../components/toast.js"></script> <!-- Link to toast script -->
 </body>
 </html> 

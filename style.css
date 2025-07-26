@@ -14,33 +14,46 @@ body {
     align-items: center;
     text-align: center;
     background-color: #ffffff;
-    padding: 25px; /* Increased padding */
-    border-radius: 12px; /* More rounded corners */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Stronger, softer shadow */
-    margin-bottom: 25px; /* Increased margin */
+    padding: 30px; /* Slightly increased padding */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12); /* Stronger, softer shadow */
+    margin-bottom: 30px; /* Increased margin */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.home-user-summary:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18); /* Enhanced shadow on hover */
 }
 
 .user-profile-thumb {
-    width: 90px; /* Slightly larger thumbnail */
-    height: 90px; /* Slightly larger thumbnail */
+    width: 100px; /* Slightly larger thumbnail */
+    height: 100px; /* Slightly larger thumbnail */
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px; /* Increased margin */
-    border: 4px solid #28a745; /* Thicker border */
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* Shadow for the image */
+    margin-bottom: 20px; /* Increased margin */
+    border: 5px solid #28a745; /* Thicker border */
+    box-shadow: 0 0 0 8px rgba(40, 167, 69, 0.2); /* Green glow effect */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.user-profile-thumb:hover {
+    transform: scale(1.08); /* More pronounced enlarge on hover */
+    border-color: #007bff; /* Change border color on hover */
 }
 
 .user-details h2 {
     margin-top: 0;
-    margin-bottom: 8px; /* Adjusted margin */
+    margin-bottom: 10px; /* Adjusted margin */
     color: #28a745;
-    font-size: 1.8em; /* Larger heading */
+    font-size: 2em; /* Larger heading */
+    font-weight: 700; /* Bolder */
 }
 
 .user-details .summary-stat {
-    font-size: 1em; /* Slightly larger text */
+    font-size: 1.1em; /* Slightly larger text */
     color: #555;
-    margin: 5px 0; /* Adjusted margin */
+    margin: 6px 0; /* Adjusted margin */
 }
 
 .user-details .summary-stat span {
@@ -246,11 +259,25 @@ body.dark-mode .bottom-nav .nav-item:active {
 
 body.dark-mode .home-user-summary {
     background-color: #3a3a3a;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3); /* Dark mode shadow */
+}
+
+body.dark-mode .home-user-summary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4); /* Dark mode hover shadow */
+}
+
+body.dark-mode .user-profile-thumb {
+    border: 5px solid #5cb85c; /* Dark mode border */
+    box-shadow: 0 0 0 8px rgba(92, 184, 92, 0.2); /* Dark mode glow */
+}
+
+body.dark-mode .user-profile-thumb:hover {
+    border-color: #0091ff; /* Dark mode hover border color */
 }
 
 body.dark-mode .user-details h2 {
-    color: #5cb85c;
+    color: #5cb85c; /* A lighter green for dark mode */
 }
 
 body.dark-mode .user-details .summary-stat,

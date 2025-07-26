@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../style.css"> <!-- Link to global style.css -->
     <link rel="stylesheet" href="post.css"> <!-- Link to post-specific style.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../components/toast.css"> <!-- Link to toast styles -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 </head>
 <body>
     <header class="main-header">
@@ -38,13 +40,26 @@
                 </div>
                 <div class="form-group">
                     <label for="treeImage">Upload Tree Image:</label>
-                    <input type="file" id="treeImage" accept="image/*">
+                    <div class="custom-file-upload">
+                        <input type="file" id="treeImage" accept="image/*" style="display: none;">
+                        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                        <p>Drag & Drop or Click to Upload</p>
+                    </div>
                     <img id="imagePreview" src="#" alt="Image Preview" style="max-width: 100%; height: auto; margin-top: 10px; display: none;">
                     <p class="help-text">Upload an initial image of your adopted tree.</p>
                 </div>
                 <div class="form-group">
-                    <label for="gpsLocation">GPS Location:</label>
-                    <input type="text" id="gpsLocation" placeholder="Live Location" required>
+                    <label>GPS Location:</label>
+                </div>
+                <div id="map" style="height: 300px; width: 100%; border-radius: 8px; margin-bottom: 20px;">
+                    <div id="mapLocationOverlay" class="map-info-overlay">
+                        <p class="overlay-area-name"></p>
+                        <p class="overlay-full-address"></p>
+                        <p class="overlay-coords"></p>
+                        <p class="overlay-datetime"></p>
+                    </div>
+                </div>
+                <div class="form-group">
                     <button type="button" class="get-gps-btn"><i class="fas fa-map-marker-alt"></i> Get Current Location</button>
                 </div>
                 <div class="form-group">
@@ -84,5 +99,7 @@
     <script src="../script.js"></script>
     <script src="post.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/bigdatacloudapi/js-reverse-geocode-client@latest/bigdatacloud_reverse_geocode.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../components/toast.js"></script> <!-- Link to toast script -->
 </body>
 </html> 

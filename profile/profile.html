@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../style.css"> <!-- Link to global style.css -->
     <link rel="stylesheet" href="profile.css"> <!-- Link to profile-specific style.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../components/toast.css"> <!-- Link to toast styles -->
 </head>
 <body>
     <header class="main-header">
@@ -29,7 +30,7 @@
                 <h2 class="profile-name">Ayush Gupta</h2>
                 <p class="profile-role">[User Role]</p>
                 <p class="profile-bio">[User Bio/Description]</p>
-                <button class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+                <a href="edit-profile.html" class="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</a>
             </section>
 
             <section class="profile-stats">
@@ -62,6 +63,7 @@
                         <button class="view-timeline-btn"><i class="fas fa-chart-line"></i> View Timeline</button>
                         <button class="qr-code-btn"><i class="fas fa-qrcode"></i> Generate QR</button>
                         <button class="timelapse-btn"><i class="fas fa-video"></i> Timelapse</button>
+                        <button class="share-btn"><i class="fas fa-share-alt"></i> Share Tree</button>
                     </div>
                 </div>
             </section>
@@ -86,35 +88,6 @@
 
         </div>
     </main>
-
-    <!-- Edit Profile Modal -->
-    <div id="editProfileModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Edit Profile</h2>
-            <form id="editProfileForm">
-                <div class="form-group">
-                    <label for="editProfilePicture">Profile Picture:</label>
-                    <input type="file" id="editProfilePicture" accept="image/*" style="display: none;">
-                    <img id="editProfilePicturePreview" src="#" alt="Profile Picture Preview" style="max-width: 100px; height: auto; margin-top: 10px; border-radius: 50%; display: block; cursor: pointer;">
-                </div>
-                <div class="form-group">
-                    <label for="editProfileName">Name:</label>
-                    <input type="text" id="editProfileName" required>
-                </div>
-                <div class="form-group">
-                    <label for="editProfileRole">Role:</label>
-                    <input type="text" id="editProfileRole">
-                </div>
-                <div class="form-group">
-                    <label for="editProfileBio">Bio:</label>
-                    <textarea id="editProfileBio" rows="4"></textarea>
-                </div>
-                <button type="submit" class="save-profile-btn">Save Changes</button>
-                <button type="button" class="cancel-edit-btn">Cancel</button>
-            </form>
-        </div>
-    </div>
 
     <footer class="bottom-nav">
         <nav>
@@ -143,5 +116,6 @@
 
     <script src="../script.js"></script> <!-- Link to global script.js -->
     <script src="profile.js"></script> <!-- Link to profile-specific script.js -->
+    <script src="../components/toast.js"></script> <!-- Link to toast script -->
 </body>
 </html> 

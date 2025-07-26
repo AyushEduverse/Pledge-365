@@ -53,29 +53,37 @@
 }
 
 .edit-profile-btn {
-    background-color: #007bff;
+    background-color: #007bff; /* Primary blue */
     color: white;
-    border: none;
-    border-radius: 25px; /* More rounded button */
-    padding: 10px 20px; /* Larger padding */
-    font-size: 1em; /* Slightly larger font */
+    border: 1px solid #0066cc; /* Slightly darker border */
+    border-radius: 28px; /* More rounded */
+    padding: 12px 25px; /* Increased padding */
+    font-size: 1.05em; /* Slightly larger font */
+    font-weight: 600; /* Bolder text */
     cursor: pointer;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform */
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Added box-shadow transition */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Initial subtle shadow */
+    text-decoration: none; /* Remove underline */
 }
 
 .edit-profile-btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px); /* Lift effect */
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* More pronounced lift effect */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* More prominent shadow on hover */
 }
 
 .edit-profile-btn:active {
     transform: translateY(0); /* Press effect */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow when pressed */
 }
 
 .edit-profile-btn .fas {
-    margin-right: 8px; /* Increased margin for icon */
+    /* Icon already styled, gap handles spacing now */
+    margin-right: 0; /* Remove old margin as gap is used */
 }
 
 /* Profile Stats */
@@ -179,13 +187,13 @@
     color: white;
     border: none;
     border-radius: 25px; /* More rounded buttons */
-    padding: 10px 18px; /* Larger padding */
-    font-size: 0.95em;
+    padding: 10px 18px; /* Standardized padding */
+    font-size: 0.95em; /* Standardized font size */
     cursor: pointer;
-    display: inline-flex; /* Use inline-flex for horizontal alignment */
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 8px 5px; /* Adjust margin for spacing between buttons */
+    margin: 8px 5px; /* Standardized margin */
     transition: background-color 0.3s ease, transform 0.2s ease;
     width: auto; /* Allow buttons to size based on content */
 }
@@ -201,6 +209,19 @@
 
 .tree-info button .fas {
     margin-right: 8px;
+}
+
+.share-btn {
+    background-color: #17a2b8; /* Info blue, or choose another color */
+}
+
+.share-btn:hover {
+    background-color: #138496;
+    transform: translateY(-2px);
+}
+
+.share-btn:active {
+    transform: translateY(0);
 }
 
 /* Badges Section */
@@ -269,10 +290,13 @@ body.dark-mode .badge-item span {
 
 body.dark-mode .edit-profile-btn {
     background-color: #0091ff; /* Darker blue for dark mode */
+    border: 1px solid #007acc;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Dark mode initial shadow */
 }
 
 body.dark-mode .edit-profile-btn:hover {
     background-color: #006bb3;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4); /* Dark mode hover shadow */
 }
 
 body.dark-mode .tree-info button {
@@ -281,6 +305,14 @@ body.dark-mode .tree-info button {
 
 body.dark-mode .tree-info button:hover {
     background-color: #3b8e40;
+}
+
+body.dark-mode .share-btn {
+    background-color: #20c997; /* Lighter teal for dark mode */
+}
+
+body.dark-mode .share-btn:hover {
+    background-color: #17a2b8;
 }
 
 body.dark-mode .badge-item {
@@ -343,162 +375,6 @@ body.dark-mode .tree-info button {
 
 body.dark-mode .tree-info button:hover {
     background-color: #3b8e40;
-}
-
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    width: 90%; /* Responsive width */
-    max-width: 500px;
-    position: relative;
-    text-align: center;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: #333;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-content h2 {
-    color: #28a745;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-}
-
-.modal-content .form-group label {
-    text-align: left;
-    width: 100%;
-}
-
-.modal-content input[type="text"],
-.modal-content textarea {
-    width: calc(100% - 24px); /* Account for padding */
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    box-sizing: border-box;
-}
-
-.modal-content input[type="file"] {
-    margin-bottom: 15px;
-}
-
-.modal-content textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-.save-profile-btn,
-.cancel-edit-btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    font-size: 1em;
-    cursor: pointer;
-    margin: 10px 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.save-profile-btn:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
-}
-
-.cancel-edit-btn {
-    background-color: #dc3545;
-}
-
-.cancel-edit-btn:hover {
-    background-color: #c82333;
-    transform: translateY(-2px);
-}
-
-.save-profile-btn:active,
-.cancel-edit-btn:active {
-    transform: translateY(0);
-}
-
-#editProfilePicturePreview {
-    border: 2px solid #ddd;
-    display: block;
-    margin: 10px auto;
-}
-
-/* Dark Mode for Modal */
-body.dark-mode .modal-content {
-    background-color: #3a3a3a;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-}
-
-body.dark-mode .close-button {
-    color: #bbb;
-}
-
-body.dark-mode .close-button:hover,
-body.dark-mode .close-button:focus {
-    color: #f4f7f6;
-}
-
-body.dark-mode .modal-content h2 {
-    color: #5cb85c;
-}
-
-body.dark-mode .modal-content input[type="text"],
-body.dark-mode .modal-content textarea {
-    background-color: #4a4a4a;
-    color: #f4f7f6;
-    border-color: #555;
-}
-
-body.dark-mode .save-profile-btn {
-    background-color: #45a049;
-}
-
-body.dark-mode .save-profile-btn:hover {
-    background-color: #3b8e40;
-}
-
-body.dark-mode .cancel-edit-btn {
-    background-color: #a04545;
-}
-
-body.dark-mode .cancel-edit-btn:hover {
-    background-color: #8c3a3a;
 }
 
 /* Responsive adjustments for Profile Page */

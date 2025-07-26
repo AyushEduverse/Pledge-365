@@ -74,30 +74,9 @@
 
 .post-info {
     display: flex;
-    flex-direction: column; /* Keep column direction for its contents */
-    /* Removed flex-grow: 1 to prevent it from taking all available space */
+    flex-direction: column;
+    flex-grow: 1; /* Added to make post-info take available space */
     justify-content: center;
-}
-
-.post-secondary-info {
-    display: flex;
-    flex-direction: column; /* Stack date and eco-level vertically */
-    font-size: 0.85em;
-    color: #666;
-}
-
-.post-location {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-.post-location .fas {
-    margin-right: 5px;
-    color: #007bff; /* A distinct color for the map icon */
 }
 
 .user-primary-info,
@@ -217,6 +196,59 @@
     color: #28a745;
 }
 
+.like-btn.liked {
+    color: #dc3545; /* Red color when liked */
+}
+
+.comment-input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 0 15px 15px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.comment-input-area input {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comment-input-area button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comment-input-area button:hover {
+    background-color: #218838;
+}
+
+.post-comments {
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.comment-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border-radius: 3px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.comment-item strong {
+    color: #28a745;
+}
+
 .action-icon {
     width: 20px;
     height: 20px;
@@ -281,12 +313,39 @@ body.dark-mode .post-actions {
     border-top: 1px solid #555;
 }
 
-body.dark-mode .post-location {
+body.dark-mode .post-location .fas {
+    color: #0091ff;
+}
+
+body.dark-mode .comment-input-area {
+    border-top: 1px solid #555;
+}
+
+body.dark-mode .comment-input-area input {
+    background-color: #555;
+    border-color: #777;
+    color: #eee;
+}
+
+body.dark-mode .comment-input-area input::placeholder {
     color: #bbb;
 }
 
-body.dark-mode .post-location .fas {
-    color: #0091ff;
+body.dark-mode .comment-input-area button {
+    background-color: #5cb85c;
+}
+
+body.dark-mode .comment-input-area button:hover {
+    background-color: #4CAF50;
+}
+
+body.dark-mode .comment-item {
+    background-color: #444;
+    color: #eee;
+}
+
+body.dark-mode .comment-item strong {
+    color: #90ee90;
 }
 
 /* Adjustments for larger screens for Feed Page */

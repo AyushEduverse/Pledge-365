@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pledge 365 - Edit Profile</title>
+    <link rel="icon" href="../assets/Pledge-365.png" type="image/png">
+    <link rel="stylesheet" href="../style.css"> <!-- Link to global style.css -->
+    <link rel="stylesheet" href="profile.css"> <!-- Link to profile-specific style.css (for general styles) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for the edit profile page */
+        .edit-profile-page-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .edit-profile-page-container h1 {
+            color: #28a745;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: calc(100% - 24px); /* Account for padding */
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        #editProfilePicturePreview {
+            max-width: 150px;
+            height: auto;
+            margin: 15px auto;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #28a745;
+            cursor: pointer;
+            display: block;
+        }
+
+        .action-buttons {
+            margin-top: 30px;
+        }
+
+        .save-profile-btn,
+        .cancel-edit-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .save-profile-btn:hover {
+            background-color: #218838;
+            transform: translateY(-2px);
+        }
+
+        .cancel-edit-btn {
+            background-color: #dc3545;
+        }
+
+        .cancel-edit-btn:hover {
+            background-color: #c82333;
+            transform: translateY(-2px);
+        }
+
+        body.dark-mode .edit-profile-page-container {
+            background-color: #3a3a3a;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        body.dark-mode .edit-profile-page-container h1 {
+            color: #5cb85c;
+        }
+        body.dark-mode .form-group label {
+            color: #f4f7f6;
+        }
+        body.dark-mode .form-group input[type="text"],
+        body.dark-mode .form-group textarea {
+            background-color: #4a4a4a;
+            color: #f4f7f6;
+            border-color: #555;
+        }
+        body.dark-mode .save-profile-btn {
+            background-color: #45a049;
+        }
+        body.dark-mode .save-profile-btn:hover {
+            background-color: #3b8e40;
+        }
+        body.dark-mode .cancel-edit-btn {
+            background-color: #a04545;
+        }
+        body.dark-mode .cancel-edit-btn:hover {
+            background-color: #8c3a3a;
+        }
+        body.dark-mode #editProfilePicturePreview {
+            border-color: #5cb85c;
+        }
+    </style>
+    <link rel="stylesheet" href="../components/toast.css"> <!-- Link to toast styles -->
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Edit Profile</h1>
+            <div class="dark-mode-toggle">
+                <div class="toggle-ball"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container edit-profile-page-container">
+            <h1>Edit Your Profile</h1>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label for="editProfilePicture">Profile Picture:</label>
+                    <img id="editProfilePicturePreview" src="../assets/user-pic.png" alt="Profile Picture Preview">
+                    <input type="file" id="editProfilePicture" accept="image/*" style="display: none;">
+                </div>
+                <div class="form-group">
+                    <label for="editProfileName">Name:</label>
+                    <input type="text" id="editProfileName" required>
+                </div>
+                <div class="form-group">
+                    <label for="editProfileRole">Role:</label>
+                    <input type="text" id="editProfileRole">
+                </div>
+                <div class="form-group">
+                    <label for="editProfileBio">Bio:</label>
+                    <textarea id="editProfileBio" rows="4"></textarea>
+                </div>
+                <div class="action-buttons">
+                    <button type="submit" class="save-profile-btn">Save Changes</button>
+                    <button type="button" class="cancel-edit-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="../script.js"></script> <!-- Global script for dark mode -->
+    <script src="edit-profile.js"></script> <!-- New script for edit profile page -->
+    <script src="../components/toast.js"></script> <!-- Link to toast script -->
+</body>
+</html> 

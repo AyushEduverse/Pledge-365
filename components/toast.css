@@ -1,0 +1,85 @@
+/* Toast Notification Styles */
+#toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000; /* Ensure it's above everything */
+    display: flex;
+    flex-direction: column-reverse; /* Stack new toasts on top */
+    gap: 10px;
+    align-items: center;
+    pointer-events: none; /* Allow clicks to pass through container */
+}
+
+.toast {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-size: 0.95em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    min-width: 250px;
+    max-width: 90%;
+    text-align: center;
+    pointer-events: auto; /* Re-enable clicks for individual toasts */
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.toast.hide {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Toast Types */
+.toast.success {
+    background-color: #28a745; /* Green */
+}
+
+.toast.error {
+    background-color: #dc3545; /* Red */
+}
+
+.toast.info {
+    background-color: #007bff; /* Blue */
+}
+
+/* Dark Mode Adjustments for Toasts */
+body.dark-mode .toast {
+    background-color: #555;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .toast.success {
+    background-color: #5cb85c;
+}
+
+body.dark-mode .toast.error {
+    background-color: #e65c6c;
+}
+
+body.dark-mode .toast.info {
+    background-color: #0091ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #toast-container {
+        bottom: 10px;
+        width: 100%;
+        max-width: none;
+        align-items: stretch; /* Stretch toasts to full width */
+        padding: 0 10px;
+    }
+
+    .toast {
+        border-radius: 5px;
+    }
+} 
